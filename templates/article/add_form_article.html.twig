@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddArticleController!{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Hello! ✅</h1>
+        <p>
+            Voici le formulaire pour ajouter un article
+        </p>
+
+
+
+
+        {{ form_start(form) }}
+        <div class="form-group">
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title) }}
+        {{ form_errors(form.title) }}
+        </div>
+
+        <div class="form-group">
+
+        {{ form_label(form.image) }}
+        {{ form_widget(form.image) }}
+        {{ form_errors(form.image) }}
+
+        </div>
+        <div class="form-group">
+
+        {{ form_label(form.contents) }}
+        {{ form_widget(form.contents) }}
+        {{ form_errors(form.contents) }}
+        </div>
+
+            <div class="form-group">
+        {{ form_label(form.publicationDate) }}
+        {{ form_widget(form.publicationDate) }}
+        {{ form_errors(form.publicationDate) }}
+            </div>
+{#        {{ form_row(form.imageUpload) }}#}
+        {{ form_end(form) }}
+        </div>
+
+
+    </div>
+{% endblock %}
